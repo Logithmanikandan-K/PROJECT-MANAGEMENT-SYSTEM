@@ -7,9 +7,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root route for Render health check
+app.get("/", (req, res) => {
+  res.send("Project Management API is running successfully!");
+});
+
 // Connect to MongoDB
+const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/taskmanager";
+
 mongoose
-  .connect("mongodb://127.0.0.1:27017/taskmanager")
+  .connect(mongoURI)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("MongoDB connection error:", err.message));
 
