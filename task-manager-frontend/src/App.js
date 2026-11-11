@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "https://project-management-system-1-u3tu.onrender.com";
+const API = "https://project-management-system-1-u3tu.onrender.com/tasks";
 const STATUSES = ["Pending", "Ongoing", "Completed"];
 
 export default function App() {
@@ -144,7 +144,7 @@ export default function App() {
         })}
       </section>
       <footer className="text-center mt-5 small text-muted">
-     Project Management Dashboard
+       Project Management Dashboard
       </footer>
     </main>
   );
