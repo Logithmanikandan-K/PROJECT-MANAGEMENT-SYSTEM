@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5000/tasks";
+const API = "https://project-management-system-1-u3tu.onrender.com";
 const STATUSES = ["Pending", "Ongoing", "Completed"];
 
 export default function App() {
